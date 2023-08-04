@@ -1,17 +1,17 @@
 package br.com.teste.animaisms.view.model;
 
 public class AnimalModeloInclusao {
-    private String dono;
+    private Integer dono;
     private String nome;
     private Integer idade;
     private String raca;
 
     //#region Get / Set
-    public String getDono() {
+    public Integer getDono() {
         return dono;
     }
 
-    public void setDono(String dono) {
+    public void setDono(Integer dono) {
         this.dono = dono;
     }
 
