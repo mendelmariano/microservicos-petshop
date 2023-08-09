@@ -16,6 +16,13 @@
 		},
 		{
 			"path": "arquitetura"
+		},
+		{
+			"name": "config-server",
+			"path": "config-server"
+		},
+		{
+			"path": "configs"
 		}
 	],
 	"settings": {

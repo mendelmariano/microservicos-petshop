@@ -6,7 +6,16 @@ public class PessoaDto {
     private Integer id;
     private String nome;
     private String sobrenome;
+    private List<AnimalDTO> animais;
 
+
+    public List<AnimalDTO> getAnimais() {
+        return animais;
+    }
+
+    public void setAnimais(List<AnimalDTO> animais) {
+        this.animais = animais;
+    }
 
     //#region Get / Set
     public Integer getId() {

@@ -25,6 +25,7 @@ import br.com.teste.primeirorest.model.Pessoa;
 import br.com.teste.primeirorest.service.PessoaService;
 import br.com.teste.primeirorest.view.model.PessoaModeloRequest;
 import br.com.teste.primeirorest.view.model.PessoaModeloResponse;
+import br.com.teste.primeirorest.view.model.PessoaModeloResponseDetalhes;
 
 
 @RestController
@@ -64,12 +65,12 @@ public class PessoaController {
     }
     
     @GetMapping(value="/{id}")
-    public ResponseEntity<PessoaModeloResponse> obterPorId(@PathVariable Integer id) {
+    public ResponseEntity<PessoaModeloResponseDetalhes> obterPorId(@PathVariable Integer id) {
         Optional<PessoaDto> pessoa = service.obterPorId(id);
 
         if(pessoa.isPresent()) {
             return new ResponseEntity<>(
-                new ModelMapper().map(pessoa.get(), PessoaModeloResponse.class), 
+                new ModelMapper().map(pessoa.get(), PessoaModeloResponseDetalhes.class), 
                 HttpStatus.OK
             );
         }
